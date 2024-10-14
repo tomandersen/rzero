@@ -8,6 +8,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\usepackage{csquotes}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
@@ -17,6 +18,8 @@
 \usepackage[english]{babel}
 
 % https://mirror.csclub.uwaterloo.ca/CTAN/macros/latex/contrib/subfiles/subfiles.pdf
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{bibtex.bib}
 \usepackage{subfiles}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -58,7 +61,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Book's title and subtitle
-\title{\Huge \textbf{Rzero}  \footnote{Title is in progress.} \\ \huge How far can Einstein's dream take us?}
+\title{rzero}
+%\title{\Huge \textbf{Rzero}  \footnote{Title is in progress.} \\ \huge How far can Einstein's dream take us?}
 % Author
 \author{\textsc{Thomas C Andersen}\thanks{\url{https://orcid.org/0000-0003-1614-4124}}}
 
@@ -94,5 +98,8 @@ Dedicated to Calvin and Hobbes.
 % Chapters %
 %%%%%%%%%%%%%%%%
 \subfile{chapters/introduction}
+
+
+\printbibliography
 
 \end{document}
