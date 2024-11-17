@@ -36,16 +36,27 @@ It may be that the Einstein theory of General Relativity is missing something!\c
 In this chapter, instead of looking at how to perhaps modify Einstein's General Relativity, I look at an energy based argument for the existence of monopole gravitational waves. I think the rational for independent (non dragged - along) monopole waves is strong, and I don't want to muddy the waters by looking at one psuedo tensor or other approach.  
 
 \subsection{Brown \& York and Lynden-Bell \& Katz}
-The fact that Einstein's equations don't describe energy in the actual field just \textit{feels} wrong. To deal with this feeling, physicists have come up with some ways to think about the energy in a gravitational field. It's called 'quasi-local' energy. In most papers on quasi local energy, the authors don't discuss ways of modifying the Einstein field equations to take this quasi local energy into account, they 'merely' come up with expressions that describe energy in the gravitational field. 
+The fact that Einstein's equations don't describe energy in the actual field just \textit{feels} wrong. To deal with this feeling, physicists have come up with some ways to think about the energy in a gravitational field. It's called 'quasi-local' energy. In most papers on quasi local energy, the authors don't discuss ways of modifying the Einstein field equations to take this quasi local energy into account, they 'merely' come up with expressions that describe energy in the gravitational field. So my plan is as follows: I look at the expressions for gravitational energy in the field from Brown and York\cite{Brown1993}, and Lynden-Bell Katz\cite{lyndenbell1985}.
 
-So my plan is as follows: I look at the expressions for gravitational energy in the field from Brown and York\cite{Brown1993}, and Lynden-Bell Katz\cite{lyndenbell1985}. 
+\subsection{Gravitational Energy Density near you. (Gasoline!)}
+To get a feel for these energy densities, consider this. The Lynden-Bell and Katz or Brown and York energy density\footnote{while both these have the same magnitude, one is negative, the other positive!}, are, to an excellent approximation, once your radius exceeds the black hole radius by a good amount: 
+\begin{equation}
+ E_{density}(\bar r) \approx \frac{1}{8 \pi}\frac{GM^2}{\bar r^4}.
+\end{equation}
+
+For the earth's surface we have an energy density of $\num{6e10} J/m^3$, which is according to \href{https://www.wolframalpha.com/input?i=G*%28mass+of+earth%29%5E2%2F%28%288*pi%29%286300km%29%5E4%29+in+J%2Fm%5E3}{WolframAlpha}, is about the same energy density as gasoline. More than I guessed it would be. Don't think about it, you'll be fine. (Or maybe \textit{do} think about it and a way to extract it for space travel!)
+
+
+\subsection{Monopole Wave Energy Calculation }
+The idea is to create a monopole wave that isn't 'dragged along' - instead the energy in the gravitational field will itself be used to create a wave. It turns out that the energy won't balance unless we get the monopole wave moving.
 
 Looking again at figure \label{monopoleFigure}, this time instead of a accompanying burst of energy (like the supernova neutrinos or the gravtitational waves of a LIGO event), I will try and look at the excess energy in the 'P - wave' zone in the image, and imagine it moving, either outward or inward. 
 
-Consider a spherical area of Minkowski (flat) geometry (Figure \ref{monopoleEnergy}). The energy in this interior area is zero. Outside of this region is a region of vacuum gravitational energy, in the form of a Schwarzschild metric, truncated at the boundary, say at $\bar r$ . As per Birkhoff's theorem, we really have no choice, this exterior region must look like a black hole of mass $M$ from the outside. See Vishwakarma\cite{vishwakarmaMysteriesRikNovel2014} for details on the reality of energy in the gravitational field. 
+Consider a spherical area of Minkowski (flat) geometry (Figure \ref{monopoleEnergy}). The gravitational field is Minkowskian (flat), so the energy in this interior area is zero. Outside of this region is a region of vacuum gravitational energy, in the form of a Schwarzschild metric, truncated at the boundary, say at $\bar r$ . As per Birkhoff's theorem, we really have no choice, this exterior region must look like a black hole of mass $M$ from the outside. See Vishwakarma\cite{vishwakarmaMysteriesRikNovel2014}\cite{vishwakarmaEinsteinCriticalPerspective2016} for details on the reality of energy in the gravitational field. The situation as shown in the image is at best unstable, and perhaps implausible\footnote{but I bet one could construct it from some Fourier series of gravitational waves...}. The idea is to figure out a plausible, if dynamic solution for this configuration. 
+
 
 \begin{figure}\label{monopoleEnergy}
-\includegraphics[width=\textwidth]{chapters/images/monopole-energy.jpg}
+\includegraphics[width=0.7\textwidth]{chapters/images/monopole-energy.jpg}
 \caption{Monopole Energy: In the outer region there is a Schwarzschild metric, which is impinging on a spherical region of flat space. We will find that the boundary must be rapidly moving to satisfy energy conservation.}
 \end{figure}
 
@@ -56,9 +67,9 @@ Now let's consider the gravitational field energy in this system. From Lynden-Be
  GM^2/2 \bar r .
 \end{equation}
 
-We note that at the horizon, in isotropic coordinates, the radius is $ \bar r = GM/2 $, so for a complete, \lq normal\rq\ black hole we see all the mass of the black hole is in the field. That's the basic idea of the Brown-York energy density.
+We note that at the horizon, in isotropic coordinates, the radius is $ \bar r = GM/2 $, so for a complete, \lq normal\rq\ black hole we see all the mass of the black hole is in the field. That's the basic idea of these energy density formulas.
 
-However, with our \lq hollowed out\rq\ Schwarzschild solution, there will be an mass/energy shortfall, for any $\bar r$ the  - where is this energy? While energy can get tricky in general relativity, nothing is stopping us from starting with the flat region being of a large radius $\bar r$ to put general relativity into an almost linear regime, where energy conservation is simple. We assume that this missing energy is kinetic energy - that the boundary is rapidly moving (gravitational fields can also carry kinetic energy). Thus the total energy in the entire diagram (inner flat + outer) region is:
+However, with our \lq hollowed out\rq\ Schwarzschild solution, there will be a mass/energy shortfall. Given any $\bar r$ the  - where is this energy? While energy can get tricky in general relativity, nothing is stopping us from starting with the flat region being of a large radius $\bar r$ to put general relativity into an almost linear regime, where energy conservation is simple. We now assume that this missing energy is kinetic energy - that the boundary is rapidly moving (pure gravitational fields carry kinetic energy). Thus the total energy in the entire diagram (inner flat + outer) region is:
 
 \begin{equation} \label{energyBalanceEqn}
  M = GM^2/2 \bar r + K.E.
@@ -74,19 +85,19 @@ Using Newtonian mechanics, rearranging (\ref{energyBalanceEqn}), and assuming th
  \frac{1}{2}m(r)v^2 = M - GM^2/2 \bar r , 
 \end{equation}
 
-What is this dynamic - moving mass $ m(r) $? We note that most of the mass is near the boundary area since the Brown-York energy is mostly all near the inner surface, so   $m(r) \approx GM^2/2 \bar r $. Making the substitution in to (\ref{newtonBalance}), and solving for $v$ we get, still in isotropic coords,
+What is this dynamic - moving mass $ m(r) $? We note that most of the mass is near the boundary area since the quasilocal energy is mostly all near the inner surface, so   $m(r) \approx GM^2/2 \bar r $. Making the substitution in to (\ref{newtonBalance}), and solving for $v$ we get, still in isotropic coords,
 
 \begin{equation}
  v = 2 \sqrt{\frac{\bar r}{G M} - \frac{1}{2}},
 \end{equation}
 
-or in the more often used Scwharzchild coordinates,
+or in the more often used Schwarzschild coordinates,
 \begin{equation}
  v = 2 \sqrt{\frac{r}{G M} - 2}.
 \end{equation}
-Thus, if the boundary is moving at $v$, we have energy conservation and Birkhoff's theorem works at any radius. It's obvious that the velocity could be positive or negative, so the pulse could be moving in or out. The calculated velocity here is greater than the speed of light (which is 1 here), except for close to the horizon. It's easy to calculate, and is often about $10^4c$ in places like earth bound labs and interstellar space. It seems to be frame dependent, too - since the speed depends on the (inverse of) the gravitational potential, $GM/r$, a global fact of the spacetime. 
+Thus, if the boundary is moving at $v$, we have energy conservation. Birkhoff's theorem works at any radius. It's obvious that the velocity could be positive or negative, so the pulse could be moving in or out. The calculated velocity here is greater than the speed of light (which is 1 here), except for close to the horizon. It's easy to calculate, and is often about $10^4c$ in places like earth bound labs and interstellar space. It seems to be frame dependent, too - since the speed depends on the (inverse of) the gravitational potential, $GM/r$, a global fact of the spacetime. 
 
-For complicated spacetimes, such as on the surface of the earth, an approximate value of $v$ can be calculated by looking at the nearest masses and picking the slowest speed. (At earth's surface, remembering the GM for the earth is about a centimeter, and the earth is 6000km), 
+For actual physical spacetimes, such as on the surface of the earth, an approximate value of $v$ can be calculated by looking at the nearest masses and picking the slowest speed. (At earth's surface, remembering the black hole size for the earth's mass is \href{https://www.wolframalpha.com/input?i=G*%28mass+of+earth%29%2Fc%5E2}{about a centimetre}, and the earth's radius is 6000km), 
 
 \begin{equation}
  v_{earth} = 2 \sqrt{\frac{6000km}{1 cm} - 2} \ \approx 25000c .
@@ -97,6 +108,7 @@ From the sun on earth:
 \end{equation}
 
 The reason, in our view, for taking the time to layout the Newtonian superluminal solution for this velocity is that the solution already violates the equivalence principle, perhaps implying a more Lorentzian viewpoint  of Einstein's Ether\cite{Einstein1920}. Namely that there is a special frame, and if there is, there must be Lorentz violation.  
+
 
 
 \subsubsection{Relativisic KE}
@@ -126,6 +138,9 @@ This relativistic result seems to be the one to use, but it's still dependent on
 Monopole vs transverse Surface (deep water) vs Shallow water (Tsunami waves) with the entire velocity thing... crashing on shore, etc. 
 
 Tsunami has same speed formula as these waves. Shallow == black hole horizon...
+
+\subsection{Experimental Consequences}
+
 
 
 Quantum mechanics has non
