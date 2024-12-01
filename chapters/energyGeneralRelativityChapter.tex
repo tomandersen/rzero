@@ -52,6 +52,28 @@ This brings us to Tolman's paradox:
 On a more general level, people have studied this problem. There is no easy solution. One would like a covariant gravitational energy tensor to be able to bolt onto the Einstein equations, and fix all this, but Einstein, Landau, Wheeler, etc have looked. It seems it cannot be done.  \cite{08092323EnergyMomentumGravitational}. 
 
 
+\section{A Schwarzschild like solution}
+Here is the plan: Take the quasi local energy definition from Brown and York\cite{Brown1993} or Katz\cite{Katz2005}, and try and apply it to a vacuum Schwarzschild - like solution, where the energy of the gravitational field is now included in the mass term, so that the mass enclosed within a given radius $r$ is less than $M$, the mass at a distance. Which is how the gravitational field of any physical object behaves. But instead of matter, we are allowing the energy of the gravitational field to itself have mass. 
+
+It's pretty easy to see that the resulting metric will not satisfy the usual Einstein vacuum equations, the equations will point to a stress energy tensor on the right side. This then is taken to be an instance of some sort of 'psuedo tensor'. 
+
+What is the function M(r) - what is the mass inside a radius r? 
+The Katz formula for the gravitational energy density at radius r in isotropic coordinates is 
+
+\begin{equation} \label{energyoutsideR_eGR}
+ GM(r)^2/2 \bar r .
+\end{equation}
+
+So in this case the mass energy inside r is the overall, distant constant mass M minus the integral of the mass density from $\bar r$ out to infinity. 
+
+\begin{equation} \label{energyinsideR}
+ M - GM^2/2 \bar r .
+\end{equation}
+
+But we have to remember that the mass $M$ itself is dropping as we move in, so the $M$ in equation (\ref{energyoutsideR_eGR}) is not a constant. 
+
+By Birchoff's theorem, the gravitational field outside of r should be identical to the Scwharshild, so
+
 
 
 \end{document}
