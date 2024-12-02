@@ -10,17 +10,37 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[       816,         34]
-NotebookOptionsPosition[       561,         21]
-NotebookOutlinePosition[       956,         37]
-CellTagsIndexPosition[       913,         34]
+NotebookDataLength[      1793,         59]
+NotebookOptionsPosition[      1228,         41]
+NotebookOutlinePosition[      1625,         57]
+CellTagsIndexPosition[      1582,         54]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell["Monopole to spin one", "Title",
+ CellChangeTimes->{{3.940241962658291*^9, 
+  3.940241981397023*^9}},ExpressionUUID->"a58b2b30-7ad2-4dcc-88e3-\
+76cc8ec979e0"],
+
+Cell["\<\
+Try and find the radiation field for shaking a monopole source up and down. I \
+could not find this on google scholar. What\[CloseCurlyQuote]s up people?\
+\>", "Subtitle",
+ CellChangeTimes->{{3.94024198979452*^9, 
+  3.940242029280919*^9}},ExpressionUUID->"a747d5a8-2578-4f47-b156-\
+f821c8ab7fb5"],
+
+Cell["Idea is to get ", "Text",
+ CellChangeTimes->{{3.940242035351451*^9, 
+  3.940242042393695*^9}},ExpressionUUID->"3547cc47-a11a-4a70-8147-\
+89e3235b6461"]
+}, Open  ]]
 },
 WindowSize->{808, 816},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
+WindowMargins->{{121, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"241dbe8c-3b93-4adc-93e5-21215ff86601"
@@ -36,9 +56,12 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 163, 3, 98, "Title",ExpressionUUID->"a58b2b30-7ad2-4dcc-88e3-76cc8ec979e0"],
+Cell[746, 27, 306, 6, 85, "Subtitle",ExpressionUUID->"a747d5a8-2578-4f47-b156-f821c8ab7fb5"],
+Cell[1055, 35, 157, 3, 35, "Text",ExpressionUUID->"3547cc47-a11a-4a70-8147-89e3235b6461"]
+}, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

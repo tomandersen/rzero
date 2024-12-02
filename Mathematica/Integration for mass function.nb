@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15625,        430]
-NotebookOptionsPosition[     12505,        370]
-NotebookOutlinePosition[     12903,        386]
-CellTagsIndexPosition[     12860,        383]
+NotebookDataLength[     18206,        483]
+NotebookOptionsPosition[     14764,        418]
+NotebookOutlinePosition[     15161,        434]
+CellTagsIndexPosition[     15118,        431]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -325,6 +325,8 @@ Cell[BoxData[
  CellLabel->"Out[58]=",ExpressionUUID->"1515fef1-95f0-40a2-beec-b481b3889ba9"]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{
   RowBox[{
@@ -333,11 +335,57 @@ Cell[BoxData[
      RowBox[{"{", 
       RowBox[{
        RowBox[{"deq", "==", "0"}], ",", 
-       RowBox[{"bc0", "==", "M"}], ",", 
+       RowBox[{"bc0", "==", "0"}], ",", 
        RowBox[{"bc1", "==", "0"}]}], "}"}], ",", "m", ",", "x"}], "]"}], "//",
     "Flatten"}], "\n"}]], "Input",
- CellChangeTimes->{{3.941993407130026*^9, 3.941993432775736*^9}},
- CellLabel->"In[59]:=",ExpressionUUID->"56cfb753-c949-4212-a2fe-950c620410be"]
+ CellChangeTimes->{{3.941993407130026*^9, 3.941993432775736*^9}, 
+   3.94199386549366*^9},
+ CellLabel->"In[60]:=",ExpressionUUID->"56cfb753-c949-4212-a2fe-950c620410be"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DSolve", "bvlim", 
+   "\"For some branches of the general solution, unable to compute the limit \
+at the given points. Some of the solutions may be lost.\"", 2, 60, 26, 
+   34872157924806942067, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9419936246272163`*^9, 3.9419939055176783`*^9},
+ CellLabel->
+  "During evaluation of \
+In[60]:=",ExpressionUUID->"185fa24c-6aba-4b46-b981-492703f2a736"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve", "infc", 
+   "\"The system \\!\\(\\*RowBox[{RowBox[{SqrtBox[RowBox[{RowBox[{\\\"-\\\", \
+\\\"1\\\"}], \\\"-\\\", RowBox[{\\\"4\\\", \\\" \\\", \\\"k\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}]}]], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\"&&\\\", RowBox[{RowBox[{SqrtBox[RowBox[{RowBox[{\\\"-\\\", \\\"1\\\"}], \
+\\\"-\\\", RowBox[{\\\"4\\\", \\\" \\\", \\\"k\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}]}]], \\\" \\\", RowBox[{\\\"Tan\\\", \
+\\\"[\\\", RowBox[{FractionBox[\\\"1\\\", \\\"2\\\"], \\\" \\\", \
+RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"Power\\\", \\\"[\\\", RowBox[{\
+\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\" \\\", TemplateBox[List[RowBox[List[\\\"\\\\[LeftSkeleton]\\\", \
+\\\"1\\\", \\\"\\\\[RightSkeleton]\\\"]]], \\\"C\\\"]}], \\\"+\\\", \
+RowBox[{RowBox[{\\\"Power\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\
+\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\" \\\", \
+RowBox[{\\\"DirectedInfinity\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}]}], \\\")\\\"}]}], \
+\\\"]\\\"}]}], \\\"\[Equal]\\\", \\\"0\\\"}]}]\\) contains an infinite object \
+\\!\\(\\*RowBox[{\\\"\[Infinity]\\\"}]\\).\"", 2, 60, 27, 
+   34872157924806942067, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9419936246272163`*^9, 3.941993905541935*^9},
+ CellLabel->
+  "During evaluation of \
+In[60]:=",ExpressionUUID->"abfa390b-3741-4384-8832-5b223a953153"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.941993624747056*^9, 3.941993905546032*^9},
+ CellLabel->"Out[60]=",ExpressionUUID->"96fa401e-9854-4dd0-be63-03e82f56190d"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -369,7 +417,7 @@ Cell["", "Text",
 }, Open  ]]
 },
 WindowSize->{808, 429},
-WindowMargins->{{244, Automatic}, {88, Automatic}},
+WindowMargins->{{198, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"df212a59-6a28-4941-a0b2-d0fbe6875bf4"
@@ -424,13 +472,18 @@ Cell[CellGroupData[{
 Cell[10550, 309, 339, 8, 52, "Input",ExpressionUUID->"9f2f095d-bbd9-4065-a210-5f711a7dfe97"],
 Cell[10892, 319, 269, 5, 34, "Output",ExpressionUUID->"1515fef1-95f0-40a2-beec-b481b3889ba9"]
 }, Open  ]],
-Cell[11176, 327, 449, 12, 52, "Input",ExpressionUUID->"56cfb753-c949-4212-a2fe-950c620410be"]
+Cell[CellGroupData[{
+Cell[11198, 329, 474, 13, 52, "Input",ExpressionUUID->"56cfb753-c949-4212-a2fe-950c620410be"],
+Cell[11675, 344, 450, 10, 48, "Message",ExpressionUUID->"185fa24c-6aba-4b46-b981-492703f2a736"],
+Cell[12128, 356, 1553, 25, 58, "Message",ExpressionUUID->"abfa390b-3741-4384-8832-5b223a953153"],
+Cell[13684, 383, 188, 3, 57, "Output",ExpressionUUID->"96fa401e-9854-4dd0-be63-03e82f56190d"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11662, 344, 146, 3, 98, "Title",ExpressionUUID->"85e9ecda-d81f-4666-bd5f-08abb152f62f"],
-Cell[11811, 349, 259, 6, 58, "Text",ExpressionUUID->"c39cbd3a-d9cf-4a49-8110-af5086ac7f7e"],
-Cell[12073, 357, 269, 5, 52, "Input",ExpressionUUID->"50d44d71-668e-4b1d-8333-31ee1f1cf0f4"],
-Cell[12345, 364, 144, 3, 35, "Text",ExpressionUUID->"aefe3144-7952-4186-afb2-1d66dbfa5910"]
+Cell[13921, 392, 146, 3, 98, "Title",ExpressionUUID->"85e9ecda-d81f-4666-bd5f-08abb152f62f"],
+Cell[14070, 397, 259, 6, 58, "Text",ExpressionUUID->"c39cbd3a-d9cf-4a49-8110-af5086ac7f7e"],
+Cell[14332, 405, 269, 5, 52, "Input",ExpressionUUID->"50d44d71-668e-4b1d-8333-31ee1f1cf0f4"],
+Cell[14604, 412, 144, 3, 35, "Text",ExpressionUUID->"aefe3144-7952-4186-afb2-1d66dbfa5910"]
 }, Open  ]]
 }
 ]
