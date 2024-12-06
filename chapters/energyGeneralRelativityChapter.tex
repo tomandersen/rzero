@@ -52,19 +52,21 @@ This brings us to Tolman's paradox:
 On a more general level, people have studied this problem. There is no easy solution. One would like a covariant gravitational energy tensor to be able to bolt onto the Einstein equations, and fix all this, but Einstein, Landau, Wheeler, etc have looked. It seems it cannot be done.  \cite{08092323EnergyMomentumGravitational}. 
 
 
-\section{A Schwarzschild like solution}
+\section{A Schwarzschild like solution} 
 Here is the plan: Take the quasi local energy definition from Brown and York\cite{Brown1993} or Katz\cite{Katz2005}, and try and apply it to a vacuum Schwarzschild - like solution, where the energy of the gravitational field is now included in the mass term, so that the mass enclosed within a given radius $r$ is less than $M$, the mass at a distance. Which is how the gravitational field of any physical object behaves. But instead of matter, we are allowing the energy of the gravitational field to itself have mass. 
 
 It's pretty easy to see that the resulting metric will not satisfy the usual Einstein vacuum equations, the equations will point to a stress energy tensor on the right side. This then is taken to be an instance of some sort of 'psuedo tensor'. 
 
 What is the function M(r) - what is the mass inside a radius r? 
-The Katz formula for the gravitational energy density at radius r in isotropic coordinates is 
+The Lynden-Bell and Katz\cite{lyndenbell1985} use for the gravitational energy between  $\bar r$ and $\bar r + d \bar r$ in isotropic coordinates: 
 
 \begin{equation} \label{energyoutsideR_eGR}
- GM(r)^2/2 \bar r .
+ GM(r)^2/2 \bar r^2 \ d \bar r.
 \end{equation}
 
-So in this case the mass energy inside r is the overall, distant constant mass M minus the integral of the mass density from $\bar r$ out to infinity. 
+So we can think about getting the total mass inside an isotropic radius $\bar r$ distant constant mass M minus the integral of equation (\ref{energyoutsideR_eGR}) $\bar r$ out to infinity. Another way of looking at it, is we start at a distant point out, then walk in, dropping energy from the (say collapsing) mass into the gravitational field at every step. 
+
+I have written a short Jupyter python script to calculate how this mass would look. 
 
 \begin{equation} \label{energyinsideR}
  M - GM^2/2 \bar r .
