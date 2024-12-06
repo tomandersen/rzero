@@ -10,12 +10,32 @@
 \section{Einstein had a problem}
 It may be that the Einstein theory of General Relativity is missing something! Einstein, from:\cite{08092323EnergyMomentumGravitational} 
 
-\begin{quotation}
+NOT THIS QUOTE!!! put in the 1913 stuff...
+\begin{quotation} 
 	Thus, we are now effectively forced to distinguish between "matter" and "fields", although we can hope that future generations will overcome this dualistic view and replace it with a single concept, as the field theory of our days has tried in vain to do. 
 \end{quotation}
 
 
 Field energy in General Relativity is a mess. My 'fix' is not a normal one, I'm going to abandon covariance. Let me explain.
+
+\section{A simple story}
+If we imagine a universe made with only the accepted Einstein vacuum field equations, we can get to a lot. Consider that the dust in the usual Friedmann Robertson Walker\cite{GET REF} cosmological model is made of black holes, we can easily see a universe appearing with very similar gravitational profile to ours. 
+
+But there is a problem with that. What side of the Einstein Field Equations is this dust on? The entire thing is one (extrememly complicated) vacuum solution, so we should be able to solve it with the stress energy tensor set to zero, but we can also move the black hole dust over to the right, creating the usual FRW dust stress energy tensor. 
+
+This reveals a paradox: If we assume the vacuum equations are handling this all on their own, then where is the mass? The gravitational field is massless according to General Relativity! When we put the dust in the stress energy tensor, we ascribe mass to each black hole. 
+
+Where does this mass come from? The usual explanation for this is that its just the singular masses M - the constants in each black hole. But there are serious issues with this approach. Why can we use the mass parameter - the mass is not even causally connected to our universe! The mass M also 'just' a parameter in the Field Equations.
+
+There is a great exposition on this topic by Vishwakarma\cite{vishwakarmaEinsteinCriticalPerspective2016}. Indeed - that and other papers by him solidified my perspective. We need to ditch the stress energy tensor. (Equation (3) in the quote refers to the Einstein vacuum equations, our \ref{Vaccumm}
+
+\begin{quotation}
+	A remarkable piece of evidence of the presence of fields in the absence of $T_{ik}$ is provided by the Kasner solution, which exemplifies that even in the standard paradigm, all the well-known curved solutions of Equation (3 ) do not represent space outside a gravitating mass in an empty space. [It is conventionally believed that only those curved solutions of Equation (3) are meaningful which represent space outside some source matter, otherwise the solutions represent an empty spacetime.
+\end{quotation}
+
+
+In order to achieve that, we have had to move the  
+
 
 \section{The Psuedo Tensor(s)}
 
@@ -66,7 +86,8 @@ The Lynden-Bell and Katz\cite{lyndenbell1985} use for the gravitational energy b
 
 So we can think about getting the total mass inside an isotropic radius $\bar r$ distant constant mass M minus the integral of equation (\ref{energyoutsideR_eGR}) $\bar r$ out to infinity. Another way of looking at it, is we start at a distant point out, then walk in, dropping energy from the (say collapsing) mass into the gravitational field at every step. 
 
-I have written a short Jupyter python script to calculate how this mass would look. 
+I have written a Jupyter python script to calculate this mass function. It assumes Birkhoff's theorem at every step, so the gravitational field outside of r should be identical to the Schwarzschild at that point. See the publicly available Jupyter file\cite{RzeroJupyterGravitationalEnergyipynb} for the gory details. 
+
 
 \begin{figure}
 \includegraphics[width=0.70\textwidth]{chapters/images/no-horizons.png}
@@ -79,14 +100,6 @@ I have written a short Jupyter python script to calculate how this mass would lo
 \caption{The same data as in figure \ref{isotropic-energy-hole}, but with Schwarzschild coordinates. The mass at every radius is below the horizon radius for that mass, so there is no event horixon.}
 \label{isotropic-energy-hole-s}
 \end{figure}
-
-\begin{equation} \label{energyinsideR}
- M - GM^2/2 \bar r .
-\end{equation}
-
-But we have to remember that the mass $M$ itself is dropping as we move in, so the $M$ in equation (\ref{energyoutsideR_eGR}) is not a constant. 
-
-By Birchoff's theorem, the gravitational field outside of r should be identical to the Scwharshild, so
 
 
 
