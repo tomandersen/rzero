@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    166603,       2832]
-NotebookOptionsPosition[    165799,       2810]
-NotebookOutlinePosition[    166196,       2826]
-CellTagsIndexPosition[    166153,       2823]
+NotebookDataLength[    167299,       2845]
+NotebookOptionsPosition[    166493,       2823]
+NotebookOutlinePosition[    166890,       2839]
+CellTagsIndexPosition[    166847,       2836]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2642,11 +2642,16 @@ Cell["try this", "Subtitle",
 
 Cell["\<\
 Covariant == bottom === true
-We are only initally interested in the form covariant contra, ie true, false\
+We are only initially interested in the form covariant contra, ie true, false
+Coordinates had better be rect t, x, y, z
+
+Need a two totals, embedded into each other. input tensor is g_mu_nu in pure \
+covariant.\
 \>", "Text",
  CellChangeTimes->{{3.948032998968224*^9, 3.94803300955602*^9}, {
-  3.948033049605006*^9, 
-  3.9480330798564157`*^9}},ExpressionUUID->"c3021de8-b077-4761-8103-\
+   3.948033049605006*^9, 3.9480330798564157`*^9}, 3.948034413892992*^9, {
+   3.9480345465664062`*^9, 3.9480345607144814`*^9}, {3.948034605542266*^9, 
+   3.9480346589596367`*^9}},ExpressionUUID->"c3021de8-b077-4761-8103-\
 69af95717071"],
 
 Cell[BoxData[
@@ -2664,8 +2669,9 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"{", 
       RowBox[{
-      "newMatrixRepresentation", ",", "newCoordinates", ",", 
-       "pseudoElements"}], "}"}], ",", "\[IndentingNewLine]", 
+      "newMatrixRepresentation", ",", "invRep", ",", " ", "newCoordinates", 
+       ",", "pseudoElements", ",", " ", "detg"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"newMatrixRepresentation", "=", 
        RowBox[{"matrixRepresentation", "/.", 
@@ -2678,6 +2684,9 @@ Cell[BoxData[
           RowBox[{"Select", "[", 
            RowBox[{"coordinates", ",", "StringQ"}], "]"}]}], ")"}]}]}], ";", 
       "\[IndentingNewLine]", 
+      RowBox[{"invRep", " ", "=", " ", 
+       RowBox[{"Inverse", "[", "newMatrixRepresentation", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
       RowBox[{"newCoordinates", "=", 
        RowBox[{"coordinates", "/.", 
         RowBox[{"(", 
@@ -2688,6 +2697,9 @@ Cell[BoxData[
              RowBox[{"ToExpression", "[", "#", "]"}]}], ")"}], "&"}], "/@", 
           RowBox[{"Select", "[", 
            RowBox[{"coordinates", ",", "StringQ"}], "]"}]}], ")"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"detg", " ", "=", " ", 
+       RowBox[{"Determinant", "[", "newMatrixRepresentation", "]"}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"pseudoElements", "=", 
        RowBox[{
@@ -2802,8 +2814,9 @@ Cell[BoxData[
  CellChangeTimes->{{3.9480324684842653`*^9, 3.9480324820171127`*^9}, 
    3.948032798393589*^9, 3.948033106553356*^9, {3.948033368427084*^9, 
    3.948033424285097*^9}, {3.9480340786375637`*^9, 3.948034136302685*^9}, {
-   3.9480341875484467`*^9, 
-   3.948034188445899*^9}},ExpressionUUID->"911931de-4b52-4e5c-960d-\
+   3.9480341875484467`*^9, 3.948034188445899*^9}, {3.9480344945224943`*^9, 
+   3.9480345334205313`*^9}, {3.9480346669267817`*^9, 
+   3.948034696715773*^9}},ExpressionUUID->"911931de-4b52-4e5c-960d-\
 d792b3c93755"]
 }, Open  ]]
 }, Open  ]]
@@ -2830,8 +2843,8 @@ Cell[580, 22, 176, 3, 98, "Title",ExpressionUUID->"c314af0c-29c5-4cdf-abb3-5d933
 Cell[759, 27, 158221, 2606, 638, "Text",ExpressionUUID->"a0c382d5-6cb1-432b-85a5-ba8ec6d91bea"],
 Cell[CellGroupData[{
 Cell[159005, 2637, 154, 3, 53, "Subtitle",ExpressionUUID->"aa0e038e-863c-426e-ba7f-3a8134a5150f"],
-Cell[159162, 2642, 305, 7, 58, "Text",ExpressionUUID->"c3021de8-b077-4761-8103-69af95717071"],
-Cell[159470, 2651, 6301, 155, 388, "Input",ExpressionUUID->"911931de-4b52-4e5c-960d-d792b3c93755"]
+Cell[159162, 2642, 565, 12, 127, "Text",ExpressionUUID->"c3021de8-b077-4761-8103-69af95717071"],
+Cell[159730, 2656, 6735, 163, 430, "Input",ExpressionUUID->"911931de-4b52-4e5c-960d-d792b3c93755"]
 }, Open  ]]
 }, Open  ]]
 }
