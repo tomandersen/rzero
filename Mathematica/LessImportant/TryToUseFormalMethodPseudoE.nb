@@ -1,0 +1,203 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7274,        193]
+NotebookOptionsPosition[      6923,        179]
+NotebookOutlinePosition[      7320,        195]
+CellTagsIndexPosition[      7277,        192]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"EinsteinPseudoEnergy", "[", 
+    RowBox[{
+     RowBox[{"metricTensor_", "[", 
+      RowBox[{
+      "matrixRepresentation_List", ",", "coordinates_List", ",", 
+       "metricIndex1_", ",", "metricIndex2_"}], "]"}], ",", "index1_", ",", 
+     "index2_"}], "]"}], "[", "\"\<TensorRepresentation\>\"", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "newMatrixRepresentation", ",", "invRep", ",", " ", "newCoordinates", 
+       ",", "pseudoElements", ",", " ", "detg"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"newMatrixRepresentation", "=", 
+       RowBox[{"matrixRepresentation", "/.", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"#", "->", 
+             RowBox[{"ToExpression", "[", "#", "]"}]}], ")"}], "&"}], "/@", 
+          RowBox[{"Select", "[", 
+           RowBox[{"coordinates", ",", "StringQ"}], "]"}]}], ")"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"invRep", " ", "=", " ", 
+       RowBox[{"Inverse", "[", "newMatrixRepresentation", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"newCoordinates", "=", 
+       RowBox[{"coordinates", "/.", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"#", "->", 
+             RowBox[{"ToExpression", "[", "#", "]"}]}], ")"}], "&"}], "/@", 
+          RowBox[{"Select", "[", 
+           RowBox[{"coordinates", ",", "StringQ"}], "]"}]}], ")"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"detg", " ", "=", " ", 
+       RowBox[{"Determinant", "[", "newMatrixRepresentation", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"pseudoElements", "=", 
+       RowBox[{
+        RowBox[{"Normal", "[", 
+         RowBox[{"SparseArray", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Module", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"index", "=", "#"}], "}"}], ",", 
+              RowBox[{"index", "->", 
+               RowBox[{"Total", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"1", "/", "2"}], ")"}], "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Inverse", "[", "newMatrixRepresentation", "]"}], 
+                    "[", 
+                    RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"index", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", "#"}], "]"}], "]"}], 
+                    ")"}], "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"D", "[", 
+                    RowBox[{
+                    RowBox[{"newMatrixRepresentation", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"#", ",", 
+                    RowBox[{"index", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "]"}], ",", 
+                    RowBox[{"newCoordinates", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"index", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}]}], "]"}], 
+                    "+", 
+                    RowBox[{"D", "[", 
+                    RowBox[{
+                    RowBox[{"newMatrixRepresentation", "[", 
+                    RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"index", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], ",", "#"}], "]"}], "]"}], 
+                    ",", 
+                    RowBox[{"newCoordinates", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"index", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}], 
+                    "-", 
+                    RowBox[{"D", "[", 
+                    RowBox[{
+                    RowBox[{"newMatrixRepresentation", "[", 
+                    RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"index", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], ",", 
+                    RowBox[{"index", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "]"}], ",", 
+                    RowBox[{"newCoordinates", "[", 
+                    RowBox[{"[", "#", "]"}], "]"}]}], "]"}]}], ")"}]}], ")"}],
+                   "&"}], "/@", 
+                 RowBox[{"Range", "[", 
+                  RowBox[{"Length", "[", "newMatrixRepresentation", "]"}], 
+                  "]"}]}], "]"}]}]}], "]"}], "&"}], "/@", 
+           RowBox[{"Tuples", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "newMatrixRepresentation", "]"}], "]"}], 
+             ",", "3"}], "]"}]}], "]"}], "]"}], "/.", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"ToExpression", "[", "#", "]"}], "->", "#"}], ")"}], 
+           "&"}], "/@", 
+          RowBox[{"Select", "[", 
+           RowBox[{"coordinates", ",", "StringQ"}], "]"}]}], ")"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"index1", "===", "True"}], ")"}], "&&", 
+         RowBox[{"(", 
+          RowBox[{"index2", "===", "False"}], ")"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"FullSimplify", "[", "pseudoElements", "]"}], ",", 
+        "\[IndentingNewLine]", "Indeterminate"}], "]"}]}]}], "]"}], "/;", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"SymbolName", "[", "metricTensor", "]"}], "===", 
+      "\"\<MetricTensor\>\""}], "&&", 
+     RowBox[{
+      RowBox[{"Length", "[", 
+       RowBox[{"Dimensions", "[", "matrixRepresentation", "]"}], "]"}], "==", 
+      "2"}], "&&", 
+     RowBox[{
+      RowBox[{"Length", "[", "coordinates", "]"}], "==", 
+      RowBox[{"Length", "[", "matrixRepresentation", "]"}]}], "&&", 
+     RowBox[{"BooleanQ", "[", "metricIndex1", "]"}], "&&", 
+     RowBox[{"BooleanQ", "[", "metricIndex2", "]"}], "&&", 
+     RowBox[{"BooleanQ", "[", "index1", "]"}], "&&", 
+     RowBox[{"BooleanQ", "[", "index2", "]"}]}], ")"}]}]}]], "Input",Expressio\
+nUUID->"a69c8070-62ed-4cad-a4ca-c01470bec5a9"]
+},
+WindowSize->{808, 816},
+WindowMargins->{{68, Automatic}, {Automatic, 24}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"772699ba-fea0-47c3-8a7e-9f4a24a29295"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6361, 157, 577, "Input",ExpressionUUID->"a69c8070-62ed-4cad-a4ca-c01470bec5a9"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
