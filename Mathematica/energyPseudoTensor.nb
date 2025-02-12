@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    216225,       3641]
-NotebookOptionsPosition[    215413,       3619]
-NotebookOutlinePosition[    215811,       3635]
-CellTagsIndexPosition[    215768,       3632]
+NotebookDataLength[    216194,       3640]
+NotebookOptionsPosition[    215382,       3618]
+NotebookOutlinePosition[    215780,       3634]
+CellTagsIndexPosition[    215737,       3631]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3576,10 +3576,8 @@ Cell[BoxData[
             "\[IndentingNewLine]", "\[IndentingNewLine]", 
             "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], ";", 
            "\[IndentingNewLine]", 
-           RowBox[{"(*", 
-            RowBox[{
-             RowBox[{"element", " ", "=", " ", 
-              RowBox[{"Simplify", "[", "element", "]"}]}], ";"}], "*)"}], 
+           RowBox[{"element", " ", "=", " ", 
+            RowBox[{"Simplify", "[", "element", "]"}]}], ";", 
            "\[IndentingNewLine]", 
            RowBox[{"(*", 
             RowBox[{
@@ -3612,8 +3610,9 @@ Cell[BoxData[
    3.948381858649588*^9}, {3.948381932785903*^9, 3.9483819385622168`*^9}, {
    3.948382124128821*^9, 3.948382141706751*^9}, {3.948382296590735*^9, 
    3.9483823006663637`*^9}, {3.94838257688818*^9, 3.948382624789732*^9}, 
-   3.948383191423883*^9},
- CellLabel->"In[19]:=",ExpressionUUID->"783e5529-0bbb-4522-84e8-25763c3cca5e"]
+   3.948383191423883*^9, {3.948385341351927*^9, 
+   3.9483853451047487`*^9}},ExpressionUUID->"783e5529-0bbb-4522-84e8-\
+25763c3cca5e"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -3640,7 +3639,7 @@ Cell[759, 27, 158221, 2606, 638, "Text",ExpressionUUID->"a0c382d5-6cb1-432b-85a5
 Cell[CellGroupData[{
 Cell[159005, 2637, 48837, 809, 213, "Subtitle",ExpressionUUID->"aa0e038e-863c-426e-ba7f-3a8134a5150f"],
 Cell[207845, 3448, 663, 14, 127, "Text",ExpressionUUID->"c3021de8-b077-4761-8103-69af95717071"],
-Cell[208511, 3464, 6874, 151, 766, "Input",ExpressionUUID->"783e5529-0bbb-4522-84e8-25763c3cca5e"]
+Cell[208511, 3464, 6843, 150, 766, "Input",ExpressionUUID->"783e5529-0bbb-4522-84e8-25763c3cca5e"]
 }, Open  ]]
 }, Open  ]]
 }
