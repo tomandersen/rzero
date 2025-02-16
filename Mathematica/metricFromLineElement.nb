@@ -1,0 +1,176 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6069,        168]
+NotebookOptionsPosition[      5593,        151]
+NotebookOutlinePosition[      5991,        167]
+CellTagsIndexPosition[      5948,        164]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Get Metric for Line Element", "Title",
+ CellChangeTimes->{{3.9487119154714622`*^9, 
+  3.9487119240305023`*^9}},ExpressionUUID->"f8b49537-8d61-49c8-827c-\
+76d3b5e393ea"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"metricFromLineElement", "[", "le_", "]"}], ":=", " ", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"expanded", ",", " ", "leC"}], " ", "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"coords", ",", 
+      RowBox[{
+       RowBox[{"(", "c", ")"}], " ", "have", " ", "to", " ", "be", " ", "t"}],
+       ",", "x", ",", "y", ",", "z"}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"expanded", " ", "=", " ", 
+      RowBox[{"Expand", "[", "le", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"leC", " ", "=", " ", 
+      RowBox[{"Collect", "[", 
+       RowBox[{"expanded", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+         "dt", ",", " ", "dx", ",", " ", "dy", ",", " ", "dz", ",", " ", 
+          RowBox[{"dt", " ", "dx"}], ",", " ", 
+          RowBox[{"dt", " ", "dy"}], ",", " ", 
+          RowBox[{"dt", " ", "dz"}], ",", " ", 
+          RowBox[{"dx", " ", "dy"}], ",", " ", 
+          RowBox[{"dx", " ", "dz"}], ",", " ", 
+          RowBox[{"dy", " ", "dz"}]}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"outMetric", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"ResourceFunction", "[", "\"\<MetricTensor\>\"", "]"}], "[", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Coefficient", "[", 
+             RowBox[{"leC", ",", "dt", ",", "2"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dt", " ", "dx"}], ",", "1"}], "]"}], "/", "2"}], ",", 
+            
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dt", " ", "dy"}], ",", "1"}], "]"}], "/", "2"}], ",", 
+            
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dt", " ", "dz"}], ",", "1"}], "]"}], "/", "2"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dx", " ", "dt"}], ",", "1"}], "]"}], "/", "2"}], ",", 
+            
+            RowBox[{"Coefficient", "[", 
+             RowBox[{"leC", ",", "dx", ",", "2"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dx", " ", "dy"}], ",", "1"}], "]"}], "/", "2"}], ",", 
+            
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dx", " ", "dz"}], ",", "1"}], "]"}], "/", "2"}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dy", " ", "dt"}], ",", "1"}], "]"}], "/", "2"}], ",", 
+            
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dy", " ", "dx"}], ",", "1"}], "]"}], "/", "2"}], ",", 
+            
+            RowBox[{"Coefficient", "[", 
+             RowBox[{"leC", ",", "dy", ",", "2"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dy", " ", "dz"}], ",", "1"}], "]"}], "/", "2"}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dt", " ", "dz"}], ",", "1"}], "]"}], "/", "2"}], ",", 
+            
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dx", " ", "dz"}], ",", "1"}], "]"}], "/", "2"}], ",", 
+            
+            RowBox[{
+             RowBox[{"Coefficient", "[", 
+              RowBox[{"leC", ",", 
+               RowBox[{"dy", " ", "dz"}], ",", "1"}], "]"}], "/", "2"}], ",", 
+            
+            RowBox[{"Coefficient", "[", 
+             RowBox[{"leC", ",", "dz", ",", "2"}], "]"}]}], "}"}]}], "}"}], 
+        ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", " ", "x", ",", " ", "y", ",", " ", "z"}], "}"}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", "outMetric", "]"}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.948711956239196*^9, 3.948711961955689*^9}, {
+  3.9487123216518793`*^9, 3.948712782485372*^9}, {3.948713857499702*^9, 
+  3.948713868585127*^9}},ExpressionUUID->"75ce7ed7-d934-4226-adf6-\
+5f8ea55b49ad"]
+}, Open  ]]
+},
+WindowSize->{1390, 764},
+WindowMargins->{{25, Automatic}, {56, Automatic}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"704a6fd4-aa9b-4157-babe-545d51f3b5df"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 174, 3, 98, "Title",ExpressionUUID->"f8b49537-8d61-49c8-827c-76d3b5e393ea"],
+Cell[757, 27, 4820, 121, 262, "Input",ExpressionUUID->"75ce7ed7-d934-4226-adf6-5f8ea55b49ad"]
+}, Open  ]]
+}
+]
+*)
+
