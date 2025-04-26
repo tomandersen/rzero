@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    124372,       2671]
-NotebookOptionsPosition[    118459,       2563]
-NotebookOutlinePosition[    118859,       2579]
-CellTagsIndexPosition[    118816,       2576]
+NotebookDataLength[    124724,       2680]
+NotebookOptionsPosition[    118716,       2571]
+NotebookOutlinePosition[    119116,       2587]
+CellTagsIndexPosition[    119073,       2584]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2491,6 +2491,14 @@ Cell[BoxData[
  CellLabel->"Out[65]=",ExpressionUUID->"33978e42-ec2f-4442-92ef-e1d9828cf24c"]
 }, Open  ]],
 
+Cell["\<\
+Here i tried to subtract the energy density i got from the contra stress \
+energy from the Katz one...\
+\>", "Text",
+ CellChangeTimes->{{3.951735720461526*^9, 
+  3.9517357661077223`*^9}},ExpressionUUID->"ee6d27be-62c7-4b4c-9f1e-\
+dfc694ab38ce"],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[
@@ -2667,9 +2675,10 @@ Cell[CellGroupData[{
 Cell[115577, 2470, 446, 12, 51, "Input",ExpressionUUID->"572d43ee-57a1-4d70-a455-9d331c331344"],
 Cell[116026, 2484, 265, 6, 53, "Output",ExpressionUUID->"33978e42-ec2f-4442-92ef-e1d9828cf24c"]
 }, Open  ]],
+Cell[116306, 2493, 254, 6, 35, "Text",ExpressionUUID->"ee6d27be-62c7-4b4c-9f1e-dfc694ab38ce"],
 Cell[CellGroupData[{
-Cell[116328, 2495, 1261, 35, 30, "Input",ExpressionUUID->"af66c5a9-5423-42e1-9257-31645cbfd267"],
-Cell[117592, 2532, 827, 26, 66, "Output",ExpressionUUID->"975cd3ec-49c0-44c8-b406-441eeefbf2bb"]
+Cell[116585, 2503, 1261, 35, 30, "Input",ExpressionUUID->"af66c5a9-5423-42e1-9257-31645cbfd267"],
+Cell[117849, 2540, 827, 26, 66, "Output",ExpressionUUID->"975cd3ec-49c0-44c8-b406-441eeefbf2bb"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

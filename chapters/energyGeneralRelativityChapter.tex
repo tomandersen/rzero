@@ -8,29 +8,64 @@
 
 
 \section{Einstein had a problem}
-It may be that the Einstein theory of General Relativity is missing something! Einstein, from:\cite{08092323EnergyMomentumGravitational} 
+The Einstein theory of General Relativity is missing something. Energy.
 
-NOT THIS QUOTE!!! put in the 1913 stuff...
-\begin{quotation} 
-	Thus, we are now effectively forced to distinguish between "matter" and "fields", although we can hope that future generations will overcome this dualistic view and replace it with a single concept, as the field theory of our days has tried in vain to do. 
+Einstein, in a lecture delivered on 9 September 1913 to the 96th annual meeting of the Swiss Society for Natural Sciences in Frauenfeld (translated)\cite{naturforschende1914vierteljahrsschrift}: 
+
+Imagine this live and in person: 
+\begin{quotation}
+	It has already been emphasized above that the material process alone cannot satisfy the conservation laws; but we must demand that the conservation laws be satisfied for the material process and the gravitational field \textit{together}. 
 \end{quotation}
 
+A minute or so later he follows up with: 
 
-Field energy in General Relativity is a mess. My 'fix' is not a normal one, I'm going to abandon covariance. Let me explain.
+\begin{quotation} 
+...that along with the stress-energy components $T_{\sigma \nu}$ of the material process, those of the gravitational field (namely, $t_{\sigma \nu}$) appear as an equivalent field-inducing cause, a circumstance that obviously must be demanded; for the gravitational effect of a system may not depend on the \textit{physical nature} of the system's field-producing energy.\footnote{See the  \href{https://einsteinpapers.press.princeton.edu/vol4-trans/208}{Princeton papers}.}
+\end{quotation}
+
+Note the word 'obviously'. Still, Einstein had to drop this \textit{obvious} - that the energy of the gravitational field should feedback into the equations, in order to ship General Relativity in late 1915. The reason for this was that his energy tensor $t_{\sigma \nu}$ turned out not to be a tensor, but a rather a pseudo tensor. It isn't covariant.  
+
+Fast forward to today: Field energy in General Relativity is a mess. No proper covariant energy tensor has been found, most likely because it's impossible. The fix presented here is not a normal one, we're going to abandon covariance. But first the mess.
+
+\section{The Mess}
+\subsection{Gravitational Field Energy Does Not Exist}
+Misner Thorne and Wheeler\cite{Wheeler1973}:
+   
+   \begin{quotation}
+   Anybody who looks for a magic formula for ``local gravitational energy-momentum'' is looking for the right answer to the wrong question. Unhappily, enormous time and effort were devoted in the past to trying to ``answer this question'' before investigators realized the futility of the enterprise. Toward the end, above all mathematical arguments, one came to appreciate the quiet but rock-like strength of Einstein's equivalence principle. One can always find in any given locality a frame  of reference in which all local ``gravitational fields'' ... disappear.
+   \end{quotation}
+   
+ The cope that people use to enable this is to simply shrug and say gravitational energy is not conserved. But MTW are saying more - they are saying that it doesn't exist. Read it again - at every point in a manifold, one can come up with a frame of reference where energy does not exist. Making \textit{that} your frame this frame zeros out the energy. Of course MTW on that same page wiggle out of their statement, using what I call $The\ Hack^{TM}$
+ 
+ \subsection{The Hack}
+ The solution used for this problem is for researchers to just 'know' when to bundle up some region of gravitational field energy and toss it into $T_{\sigma \nu}$. A mess. Sure it has a set of rules and makes sense - but lets get this out in the open, it's not automatic in the equations of General Relativity, as it should obviously be.
+ 
+  \subsection{Quasi Local Energy}
+  Szabados has a great review article on Quasi-Local energy.\cite{szabadosQuasiLocalEnergyMomentumAngular2009}. I note that it's pretty obvious that there is a huge problem with energy in General Relativity when a huge review paper can't simply state where it is and how to calculate it. 
+  In the last five or so decades, the use of quasi-local energy has come in as a useful tool to imagine the energy in a gravitational solution. Consider what the titans of General Relativity say about the location of the gravitational energy in the simplest solution out there, the Schwarzschild:
+  (!!!get references!!!) 
+  \begin{enumerate}
+  	\item Penrose: The energy is all inside the horizon.
+  	\item Brown and York: The energy is outside the horzion and negative.
+  	\item Katz: The energy is outside the horizon and positive. 
+  	\item MTW: We are smart and you aren't. 
+  \end{enumerate} 
+
+
 
 \section{A simple story}
-If we imagine a universe made with only the accepted Einstein vacuum field equations, we can get to a lot. Consider that the dust in the usual Friedmann Robertson Walker\cite{GET REF} cosmological model is made of black holes, we can easily see a universe appearing with very similar gravitational profile to ours. 
+If we imagine a universe made with only the accepted Einstein vacuum field equations, we can get to a lot. Consider a model where the dust in the usual Friedmann–Lemaître–Robertson–Walker cosmological model is made of black holes, we can imagine a universe appearing with very similar gravitational profile to ours. 
 
-But there is a problem with that. What side of the Einstein Field Equations is this dust on? The entire thing is one (extrememly complicated) vacuum solution, so we should be able to solve it with the stress energy tensor set to zero, but we can also move the black hole dust over to the right, creating the usual FRW dust stress energy tensor. 
+But there is a problem with that. What side of the Einstein Field Equations is this dust on? The entire thing is one (extremely complicated) vacuum solution, so we should be able to solve it with the stress energy tensor set to zero, but we can also move the black hole dust over to the right, creating the usual FRW dust stress energy tensor. 
 
 This reveals a paradox: If we assume the vacuum equations are handling this all on their own, then where is the mass? The gravitational field is massless according to General Relativity! When we put the dust in the stress energy tensor, we ascribe mass to each black hole. 
 
-Where does this mass come from? The usual explanation for this is that its just the singular masses M - the constants in each black hole. But there are serious issues with this approach. Why can we use the mass parameter - the mass is not even causally connected to our universe! The mass M also 'just' a parameter in the Field Equations.
+Where does this mass come from? The usual explanation for this is that it's just the singular masses $M$ - the constants in each black hole. But there are serious issues with this approach. Why can we use the mass parameter - the mass is not even causally connected to our universe! The mass M is 'just' a parameter in the Field Equations. 
 
-There is a great exposition on this topic by Vishwakarma\cite{vishwakarmaEinsteinCriticalPerspective2016}. Indeed - that and other papers by him solidified my perspective. We need to ditch the stress energy tensor. (Equation (3) in the quote refers to the Einstein vacuum equations, our \ref{Vaccumm}
+As Vishwakarma\cite{vishwakarmaEinsteinCriticalPerspective2016} points out, there are vacuum solutions of Einstein's equations where the free parameters don't . Indeed - that and other papers by him solidified my perspective. We need to ditch the stress energy tensor.
 
 \begin{quotation}
-	A remarkable piece of evidence of the presence of fields in the absence of $T_{ik}$ is provided by the Kasner solution, which exemplifies that even in the standard paradigm, all the well-known curved solutions of Equation (3 ) do not represent space outside a gravitating mass in an empty space. [It is conventionally believed that only those curved solutions of Equation (3) are meaningful which represent space outside some source matter, otherwise the solutions represent an empty spacetime.
+	A remarkable piece of evidence of the presence of fields in the absence of $T_{ik}$ is provided by the Kasner solution, which exemplifies that even in the standard paradigm, all the well-known curved solutions of Equation (3)\footnote{(His equation (3) refers to the Einstein vacuum equations.} do not represent space outside a gravitating mass in an empty space. [It is conventionally believed that only those curved solutions of Equation (3) are meaningful which represent space outside some source matter, otherwise the solutions represent an empty spacetime.
 \end{quotation}
 
 
@@ -49,7 +84,7 @@ And from Baryshev\cite{08092323EnergyMomentumGravitational}:
 \end{quotation}
 
 
-\section{Kutchetera}
+\section{Kutschera}
 Tom views this paper as a plea for solving the gravitational energy problem - that if one takes a energy M, and converts it to a gas of photons that the energy doubles (density term the same in T, pressure terms now exist!). This bothered Landau, etc... 
 
  
